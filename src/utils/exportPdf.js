@@ -64,12 +64,13 @@ export async function generateDashboardPDF() {
       element.style.display = 'block';
 
       // Capture section as JPEG for massive compression (drops 30MB+ to ~2MB)
+      const canvas = await toCanvas(element, opt);
       const imgData = canvas.toDataURL('image/jpeg', 0.85);
       const imgProps = pdf.getImageProperties(imgData);
       
       // Calculate scaled dimensions fitting page width
-      const drawWidth = pdfWidth - (margin * 2);
-      const drawHeight = (imgProps.height * drawWidth) / imgProps.width;
+      let drawWidth = pdfWidth - (margin * 2);
+      let drawHeight = (imgProps.height * drawWidth) / imgProps.width;
 
       // Check if it fits on current page. If it doesn't fit on a NEW page either, scale it down.
       const maxAvailableHeight = pdfHeight - margin * 2;
