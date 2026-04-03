@@ -1,5 +1,5 @@
 import { Info } from 'lucide-react';
-import { Card, CardHeader, CardContent } from '../ui/card';
+import { Card, CardHeader, CardContent } from '../UI/card';
 import Modal from './Modal';
 import { useState, useEffect, useRef } from 'react';
 

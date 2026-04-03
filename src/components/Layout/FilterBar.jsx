@@ -1,6 +1,6 @@
 import { X } from 'lucide-react';
-import { Button } from '../ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
+import { Button } from '../UI/button';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../UI/select';
 
 export default function FilterBar({ filters }) {
   const {

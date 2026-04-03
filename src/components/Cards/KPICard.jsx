@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import AnimatedCounter from '../UI/AnimatedCounter';
 import Modal from '../UI/Modal';
-import { Card, CardContent } from '../ui/card';
+import { Card, CardContent } from '../UI/card';
 
 export default function KPICard({ 
   title, value, format, icon, trend, trendLabel,

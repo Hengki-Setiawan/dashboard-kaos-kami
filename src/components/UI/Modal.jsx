@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '../ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '../UI/dialog';
 import { Info, Calculator, Lightbulb, Zap, PieChart, Target, Sparkles, Loader2, AlertTriangle } from 'lucide-react';
 import { useAIInsight } from '../../hooks/useAIInsight';
 

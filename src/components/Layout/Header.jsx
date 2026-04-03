@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Moon, Sun, Download, Share2, Loader2, Check } from 'lucide-react';
 import { useTheme } from '../../hooks/useTheme';
-import { Button } from '../ui/button';
+import { Button } from '../UI/button';
 import { generateDashboardPDF } from '../../utils/exportPdf';
 
 export default function Header() {
