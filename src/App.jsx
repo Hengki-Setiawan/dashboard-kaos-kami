@@ -148,11 +148,11 @@ function App() {
 
       {/* Main Content */}
       <div 
-        className={`flex-1 flex flex-col relative z-10 transition-all duration-300 ease-out ml-0 ${sidebarCollapsed ? 'lg:ml-[72px]' : 'lg:ml-[260px]'}`}
+        className={`flex-1 flex flex-col relative z-10 transition-all duration-300 ease-out min-w-0 ml-0 ${sidebarCollapsed ? 'lg:ml-[72px]' : 'lg:ml-[260px]'}`}
       >
         <Header onMenuClick={() => setMobileMenuOpen(true)} />
 
-        <main className="flex-1 px-4 sm:px-6 lg:px-8 py-6 overflow-x-hidden w-full max-w-[100vw]">
+        <main className="flex-1 px-4 sm:px-6 lg:px-8 py-6 overflow-x-hidden">
           <FilterBar filters={filters} />
 
           <div className="flex flex-col gap-10 max-w-[1500px] mx-auto pb-20">

@@ -67,7 +67,7 @@ export default function RevenueTrend({ data }) {
       <ResponsiveContainer width="100%" height="100%" minHeight={300}>
         <ComposedChart
           data={chartData}
-          margin={{ top: 15, right: 10, bottom: 15, left: -15 }}
+          margin={{ top: 15, right: 10, bottom: 15, left: 10 }}
         >
           <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" vertical={false} />
           <XAxis 
