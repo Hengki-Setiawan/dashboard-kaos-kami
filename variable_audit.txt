@@ -1,0 +1,233 @@
+============================================================
+AUDIT: KOLOM YANG BELUM DIGUNAKAN
+============================================================
+
+
+--- No. Resi ---
+  Tipe: object
+  Null: 0 / 327
+  Unique: 309
+  Sample: ['004277156631' '004277159928' 'SPXID042029545882' '004277158394'
+ '004278131073']
+
+--- Pesanan Harus Dikirimkan Sebelum (Menghindari keterlambatan) ---
+  Tipe: object
+  Null: 0 / 327
+  Unique: 309
+  Sample: ['2024-02-15 01:45' '2024-02-15 12:13' '2024-02-15 13:03'
+ '2024-02-13 15:52' '2024-02-15 22:47']
+
+--- Waktu Pengiriman Diatur ---
+  Tipe: object
+  Null: 0 / 327
+  Unique: 209
+  Sample: ['2024-02-03 17:52' '2024-02-03 17:15' '2024-02-07 15:37'
+ '2024-02-07 15:33' '2024-02-07 15:54']
+
+--- SKU Induk ---
+  Tipe: float64
+  Null: 327 / 327
+  Min: nan, Max: nan, Mean: nan
+  Unique values: []
+
+--- Nomor Referensi SKU ---
+  Tipe: float64
+  Null: 327 / 327
+  Min: nan, Max: nan, Mean: nan
+  Unique values: []
+
+--- Berat Produk ---
+  Tipe: object
+  Null: 0 / 327
+  Unique: 2
+  Sample: ['200 gr' '400 gr']
+
+--- Total Berat ---
+  Tipe: object
+  Null: 0 / 327
+  Unique: 2
+  Sample: ['200 gr' '400 gr']
+
+--- Paket Diskon ---
+  Tipe: object
+  Null: 0 / 327
+  Unique: 1
+  Sample: ['N']
+
+--- Paket Diskon (Diskon dari Shopee) ---
+  Tipe: int64
+  Null: 0 / 327
+  Min: 0, Max: 0, Mean: 0.00
+  Unique values: [0]
+
+--- Paket Diskon (Diskon dari Penjual) ---
+  Tipe: int64
+  Null: 0 / 327
+  Min: 0, Max: 0, Mean: 0.00
+  Unique values: [0]
+
+--- Diskon Kartu Kredit ---
+  Tipe: int64
+  Null: 0 / 327
+  Min: 0, Max: 0, Mean: 0.00
+  Unique values: [0]
+
+--- Ongkos Kirim Pengembalian Barang ---
+  Tipe: int64
+  Null: 0 / 327
+  Min: 0, Max: 0, Mean: 0.00
+  Unique values: [0]
+
+--- Catatan dari Pembeli ---
+  Tipe: object
+  Null: 313 / 327
+  Unique: 13
+  Sample: ['lempar paketnya ke dalam gerbang' '+ nama kostum'
+ 'skizo putih xl, depresi xl.' 'XL'
+ 'Kaos Kami Skizo Ukuran XL Warna Hitam, semangat min!']
+
+--- Catatan ---
+  Tipe: float64
+  Null: 327 / 327
+  Min: nan, Max: nan, Mean: nan
+  Unique values: []
+
+--- Nama Penerima ---
+  Tipe: object
+  Null: 0 / 327
+  Unique: 182
+  Sample: ['D***s' 'A******n' 'N******a' 'S******i' 'R******n']
+
+--- No. Telepon ---
+  Tipe: object
+  Null: 0 / 327
+  Unique: 94
+  Sample: ['******88' '******35' '******86' '******47' '******69']
+
+--- Alamat Pengiriman ---
+  Tipe: object
+  Null: 0 / 327
+  Unique: 295
+  Sample: ['******r, jawabarat 16680 ( setelah masjid jami al barokah belok kanan, lurus rumah paling pojok) (rumah gerbang putih), KAB. BOGOR, DRAMAGA, JAWA BARAT, ID, 16680'
+ '******a, Bobotsari (Toko shinta acc), KAB. PURBALINGGA, BOBOTSARI, JAWA TENGAH, ID, 53353'
+ '******inatan Blok u No 1 rt 87 rw 07 kelurahan Sukajaya, KOTA PALEMBANG, SUKARAMI, SUMATERA SELATAN, ID, 30151'
+ '******, Desa Adisana, KAB. BREBES, BUMIAYU, JAWA TENGAH, ID, 52273'
+ '******2/RW.3, Curug, Gunung Sindur, KAB. BOGOR, GUNUNG SINDUR, JAWA BARAT, ID, 16340']
+
+
+============================================================
+KOLOM YANG SUDAH DIGUNAKAN
+============================================================
+  ✅ No. Pesanan
+  ✅ Status Pesanan
+  ✅ Status Pembatalan/ Pengembalian
+  ✅ Opsi Pengiriman
+  ✅ Antar ke counter/ pick-up
+  ✅ Waktu Pesanan Dibuat
+  ✅ Waktu Pembayaran Dilakukan
+  ✅ Waktu Pesanan Selesai
+  ✅ Metode Pembayaran
+  ✅ Nama Produk
+  ✅ Nama Variasi
+  ✅ Harga Awal
+  ✅ Harga Setelah Diskon
+  ✅ Jumlah
+  ✅ Returned quantity
+  ✅ Total Harga Produk
+  ✅ Total Diskon
+  ✅ Diskon Dari Penjual
+  ✅ Diskon Dari Shopee
+  ✅ Jumlah Produk di Pesan
+  ✅ Voucher Ditanggung Penjual
+  ✅ Cashback Koin
+  ✅ Voucher Ditanggung Shopee
+  ✅ Potongan Koin Shopee
+  ✅ Ongkos Kirim Dibayar oleh Pembeli
+  ✅ Estimasi Potongan Biaya Pengiriman
+  ✅ Total Pembayaran
+  ✅ Perkiraan Ongkos Kirim
+  ✅ Username (Pembeli)
+  ✅ Kota/Kabupaten
+  ✅ Provinsi
+
+
+Total kolom: 48
+Digunakan: 31
+Belum digunakan: 17
+
+
+============================================================
+ANALISIS MENDALAM KOLOM YANG BELUM DIGUNAKAN
+============================================================
+
+--- No. Resi ---
+  Bisa digunakan untuk: Identifikasi unik paket, tracking
+  Unique: 309
+
+--- Pesanan Harus Dikirimkan Sebelum ---
+  Rata-rata deadline dari pesanan dibuat: 261.7 jam
+  Pesanan terlambat kirim (shipped after deadline): 0
+  Pesanan tepat waktu: 0
+
+--- Waktu Pengiriman Diatur ---
+  Rata-rata waktu pengaturan pengiriman: 43.1 jam
+  Min: 1.4 jam
+  Max: 149.8 jam
+
+--- SKU Induk ---
+  Semua NULL (327/327) - TIDAK BERGUNA
+
+--- Nomor Referensi SKU ---
+  Semua NULL (327/327) - TIDAK BERGUNA
+
+--- Berat Produk ---
+  Values: {'200 gr': 325, '400 gr': 2}
+
+--- Total Berat ---
+  Values: {'200 gr': 289, '400 gr': 38}
+
+--- Paket Diskon ---
+  Semua 'N' - TIDAK BERGUNA (tidak ada paket diskon)
+
+--- Paket Diskon (Diskon dari Shopee) ---
+  Semua 0 - TIDAK BERGUNA
+
+--- Paket Diskon (Diskon dari Penjual) ---
+  Semua 0 - TIDAK BERGUNA
+
+--- Diskon Kartu Kredit ---
+  Semua 0 - TIDAK BERGUNA
+
+--- Ongkos Kirim Pengembalian Barang ---
+  Semua 0 - TIDAK BERGUNA
+
+--- Catatan dari Pembeli ---
+  Non-null: 14
+    - "lempar paketnya ke dalam gerbang"
+    - "+ nama kostum"
+    - "skizo putih xl, depresi xl."
+    - "skizo putih xl, depresi xl."
+    - "XL"
+    - "Kaos Kami Skizo Ukuran XL Warna Hitam, semangat min!"
+    - "Warna hitam bg size XL.  Ditunggu barang ny bg heng,"
+    - "A/N Daffa Rahman XI MIPA 4"
+    - "Size L,versi HITAM , Lengan pendek"
+    - "Size L"
+
+--- Catatan ---
+  Semua NULL - TIDAK BERGUNA
+
+--- Nama Penerima ---
+  Data privasi (masked) - TIDAK dipakai di dashboard
+
+--- No. Telepon ---
+  Data privasi (masked) - TIDAK dipakai di dashboard
+
+--- Alamat Pengiriman ---
+  Data privasi (partial masked) - TIDAK dipakai langsung
+  TAPI bisa extract kode pos untuk analisis area
+
+--- Waktu Pembayaran Dilakukan (analysis) ---
+  Rata-rata delay pembayaran: 18.2 menit
+  Median: 0.0 menit
+  Max: 1326.0 menit

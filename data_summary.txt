@@ -1,0 +1,210 @@
+================ COLUMNS ================
+['No. Pesanan', 'Status Pesanan', 'Status Pembatalan/ Pengembalian', 'No. Resi', 'Opsi Pengiriman', 'Antar ke counter/ pick-up', 'Pesanan Harus Dikirimkan Sebelum (Menghindari keterlambatan)', 'Waktu Pengiriman Diatur', 'Waktu Pesanan Dibuat', 'Waktu Pembayaran Dilakukan', 'Metode Pembayaran', 'SKU Induk', 'Nama Produk', 'Nomor Referensi SKU', 'Nama Variasi', 'Harga Awal', 'Harga Setelah Diskon', 'Jumlah', 'Returned quantity', 'Total Harga Produk', 'Total Diskon', 'Diskon Dari Penjual', 'Diskon Dari Shopee', 'Berat Produk', 'Jumlah Produk di Pesan', 'Total Berat', 'Voucher Ditanggung Penjual', 'Cashback Koin', 'Voucher Ditanggung Shopee', 'Paket Diskon', 'Paket Diskon (Diskon dari Shopee)', 'Paket Diskon (Diskon dari Penjual)', 'Potongan Koin Shopee', 'Diskon Kartu Kredit', 'Ongkos Kirim Dibayar oleh Pembeli', 'Estimasi Potongan Biaya Pengiriman', 'Ongkos Kirim Pengembalian Barang', 'Total Pembayaran', 'Perkiraan Ongkos Kirim', 'Catatan dari Pembeli', 'Catatan', 'Username (Pembeli)', 'Nama Penerima', 'No. Telepon', 'Alamat Pengiriman', 'Kota/Kabupaten', 'Provinsi', 'Waktu Pesanan Selesai']
+
+================ SHAPE ================
+(327, 48)
+
+================ DATATYPES ================
+No. Pesanan                                                      object
+Status Pesanan                                                   object
+Status Pembatalan/ Pengembalian                                  object
+No. Resi                                                         object
+Opsi Pengiriman                                                  object
+Antar ke counter/ pick-up                                        object
+Pesanan Harus Dikirimkan Sebelum (Menghindari keterlambatan)     object
+Waktu Pengiriman Diatur                                          object
+Waktu Pesanan Dibuat                                             object
+Waktu Pembayaran Dilakukan                                       object
+Metode Pembayaran                                                object
+SKU Induk                                                       float64
+Nama Produk                                                      object
+Nomor Referensi SKU                                             float64
+Nama Variasi                                                     object
+Harga Awal                                                        int64
+Harga Setelah Diskon                                            float64
+Jumlah                                                            int64
+Returned quantity                                               float64
+Total Harga Produk                                              float64
+Total Diskon                                                    float64
+Diskon Dari Penjual                                             float64
+Diskon Dari Shopee                                                int64
+Berat Produk                                                     object
+Jumlah Produk di Pesan                                            int64
+Total Berat                                                      object
+Voucher Ditanggung Penjual                                        int64
+Cashback Koin                                                     int64
+Voucher Ditanggung Shopee                                       float64
+Paket Diskon                                                     object
+Paket Diskon (Diskon dari Shopee)                                 int64
+Paket Diskon (Diskon dari Penjual)                                int64
+Potongan Koin Shopee                                              int64
+Diskon Kartu Kredit                                               int64
+Ongkos Kirim Dibayar oleh Pembeli                               float64
+Estimasi Potongan Biaya Pengiriman                              float64
+Ongkos Kirim Pengembalian Barang                                  int64
+Total Pembayaran                                                float64
+Perkiraan Ongkos Kirim                                          float64
+Catatan dari Pembeli                                             object
+Catatan                                                         float64
+Username (Pembeli)                                               object
+Nama Penerima                                                    object
+No. Telepon                                                      object
+Alamat Pengiriman                                                object
+Kota/Kabupaten                                                   object
+Provinsi                                                         object
+Waktu Pesanan Selesai                                            object
+dtype: object
+
+================ HEAD ================
+      No. Pesanan  ... Waktu Pesanan Selesai
+0  240202EW1NSMR5  ...      2024-02-05 19:46
+1  240202G06YJ7KB  ...      2024-02-08 09:36
+2  240202G2XUYH3M  ...      2024-02-09 14:38
+3  240201DUYT67Q8  ...      2024-02-09 17:53
+4  240203KGX973RP  ...      2024-02-10 00:37
+
+[5 rows x 48 columns]
+
+================ NULL COUNTS ================
+No. Pesanan                                                       0
+Status Pesanan                                                    0
+Status Pembatalan/ Pengembalian                                 323
+No. Resi                                                          0
+Opsi Pengiriman                                                   0
+Antar ke counter/ pick-up                                         0
+Pesanan Harus Dikirimkan Sebelum (Menghindari keterlambatan)      0
+Waktu Pengiriman Diatur                                           0
+Waktu Pesanan Dibuat                                              0
+Waktu Pembayaran Dilakukan                                        0
+Metode Pembayaran                                                 0
+SKU Induk                                                       327
+Nama Produk                                                       0
+Nomor Referensi SKU                                             327
+Nama Variasi                                                      0
+Harga Awal                                                        0
+Harga Setelah Diskon                                              0
+Jumlah                                                            0
+Returned quantity                                                21
+Total Harga Produk                                                0
+Total Diskon                                                      0
+Diskon Dari Penjual                                               0
+Diskon Dari Shopee                                                0
+Berat Produk                                                      0
+Jumlah Produk di Pesan                                            0
+Total Berat                                                       0
+Voucher Ditanggung Penjual                                        0
+Cashback Koin                                                     0
+Voucher Ditanggung Shopee                                         0
+Paket Diskon                                                      0
+Paket Diskon (Diskon dari Shopee)                                 0
+Paket Diskon (Diskon dari Penjual)                                0
+Potongan Koin Shopee                                              0
+Diskon Kartu Kredit                                               0
+Ongkos Kirim Dibayar oleh Pembeli                                 0
+Estimasi Potongan Biaya Pengiriman                                0
+Ongkos Kirim Pengembalian Barang                                  0
+Total Pembayaran                                                  0
+Perkiraan Ongkos Kirim                                            0
+Catatan dari Pembeli                                            313
+Catatan                                                         327
+Username (Pembeli)                                                1
+Nama Penerima                                                     0
+No. Telepon                                                       0
+Alamat Pengiriman                                                 0
+Kota/Kabupaten                                                    0
+Provinsi                                                          0
+Waktu Pesanan Selesai                                             0
+dtype: int64
+
+================ UNIQUE VALUES ================
+No. Pesanan: 309 unique values
+Sample unique for No. Pesanan: ['240202EW1NSMR5' '240202G06YJ7KB' '240202G2XUYH3M' '240201DUYT67Q8'
+ '240203KGX973RP']
+Status Pesanan: 1 unique values
+Sample unique for Status Pesanan: ['Selesai']
+Status Pembatalan/ Pengembalian: 1 unique values
+Sample unique for Status Pembatalan/ Pengembalian: ['Permintaan Disetujui']
+No. Resi: 309 unique values
+Sample unique for No. Resi: ['004277156631' '004277159928' 'SPXID042029545882' '004277158394'
+ '004278131073']
+Opsi Pengiriman: 8 unique values
+Sample unique for Opsi Pengiriman: ['Hemat Kargo-SiCepat Halu' 'Reguler (Cashless)-SPX Standard'
+ 'Hemat Kargo-SPX Hemat' 'Reguler (Cashless)-SiCepat REG'
+ 'Reguler (Cashless)-Anteraja Reguler']
+Antar ke counter/ pick-up: 2 unique values
+Sample unique for Antar ke counter/ pick-up: ['Antar ke Counter' 'Pickup']
+Pesanan Harus Dikirimkan Sebelum (Menghindari keterlambatan): 309 unique values
+Sample unique for Pesanan Harus Dikirimkan Sebelum (Menghindari keterlambatan): ['2024-02-15 01:45' '2024-02-15 12:13' '2024-02-15 13:03'
+ '2024-02-13 15:52' '2024-02-15 22:47']
+Waktu Pengiriman Diatur: 209 unique values
+Sample unique for Waktu Pengiriman Diatur: ['2024-02-03 17:52' '2024-02-03 17:15' '2024-02-07 15:37'
+ '2024-02-07 15:33' '2024-02-07 15:54']
+Waktu Pesanan Dibuat: 309 unique values
+Sample unique for Waktu Pesanan Dibuat: ['2024-02-02 01:43' '2024-02-02 12:13' '2024-02-02 13:02'
+ '2024-02-01 15:52' '2024-02-03 21:50']
+Waktu Pembayaran Dilakukan: 309 unique values
+Sample unique for Waktu Pembayaran Dilakukan: ['2024-02-02 01:45' '2024-02-02 12:13' '2024-02-02 13:03'
+ '2024-02-01 15:52' '2024-02-03 22:47']
+Metode Pembayaran: 11 unique values
+Sample unique for Metode Pembayaran: ['Online Payment' 'Saldo ShopeePay' 'COD (Bayar di Tempat)'
+ 'SeaBank Bayar Instan' 'Kartu Kredit/Debit']
+Sample unique for SKU Induk: []
+Nama Produk: 3 unique values
+Sample unique for Nama Produk: ['Kaos Kami Skizo - Lost Kitten (Versi Hitam)'
+ 'Kaos Kami Skizo - Lost Kitten'
+ 'Kaos Kami Depresi - Shinji Chair (Anime Evanglion)']
+Sample unique for Nomor Referensi SKU: []
+Nama Variasi: 7 unique values
+Sample unique for Nama Variasi: ['XL' 'XXL' 'L' 'XXXL' 'M']
+Sample unique for Harga Awal: [ 89  99 105]
+Sample unique for Harga Setelah Diskon: [ 89.    99.   105.    86.33  96.03]
+Sample unique for Jumlah: [1 2]
+Sample unique for Returned quantity: [0. 1.]
+Sample unique for Total Harga Produk: [ 89.    99.   105.    86.33  96.03]
+Sample unique for Total Diskon: [0.   2.67 2.97]
+Sample unique for Diskon Dari Penjual: [0.   2.67 2.97]
+Sample unique for Diskon Dari Shopee: [0]
+Berat Produk: 2 unique values
+Sample unique for Berat Produk: ['200 gr' '400 gr']
+Sample unique for Jumlah Produk di Pesan: [1 2]
+Total Berat: 2 unique values
+Sample unique for Total Berat: ['200 gr' '400 gr']
+Sample unique for Voucher Ditanggung Penjual: [666 500   0   5]
+Sample unique for Cashback Koin: [0]
+Sample unique for Voucher Ditanggung Shopee: [ 0.    10.68  10.     2.1   14.405]
+Paket Diskon: 1 unique values
+Sample unique for Paket Diskon: ['N']
+Sample unique for Paket Diskon (Diskon dari Shopee): [0]
+Sample unique for Paket Diskon (Diskon dari Penjual): [0]
+Sample unique for Potongan Koin Shopee: [   0  545    1 5135  375]
+Sample unique for Diskon Kartu Kredit: [0]
+Sample unique for Ongkos Kirim Dibayar oleh Pembeli: [ 4.   0.  15.5  4.5  5. ]
+Sample unique for Estimasi Potongan Biaya Pengiriman: [20. 36. 37. 30. 40.]
+Sample unique for Ongkos Kirim Pengembalian Barang: [0]
+Sample unique for Total Pembayaran: [ 93.06   98.789  90.334 104.    104.492]
+Sample unique for Perkiraan Ongkos Kirim: [24.  36.  37.  35.5 24.5]
+Catatan dari Pembeli: 13 unique values
+Sample unique for Catatan dari Pembeli: ['lempar paketnya ke dalam gerbang' '+ nama kostum'
+ 'skizo putih xl, depresi xl.' 'XL'
+ 'Kaos Kami Skizo Ukuran XL Warna Hitam, semangat min!']
+Sample unique for Catatan: []
+Username (Pembeli): 294 unique values
+Sample unique for Username (Pembeli): ['indradimau' 'abidsj' 'palemgame' 'salmanzz_02' 'rizqi_atin']
+Nama Penerima: 182 unique values
+Sample unique for Nama Penerima: ['D***s' 'A******n' 'N******a' 'S******i' 'R******n']
+No. Telepon: 94 unique values
+Sample unique for No. Telepon: ['******88' '******35' '******86' '******47' '******69']
+Alamat Pengiriman: 295 unique values
+Sample unique for Alamat Pengiriman: ['******r, jawabarat 16680 ( setelah masjid jami al barokah belok kanan, lurus rumah paling pojok) (rumah gerbang putih), KAB. BOGOR, DRAMAGA, JAWA BARAT, ID, 16680'
+ '******a, Bobotsari (Toko shinta acc), KAB. PURBALINGGA, BOBOTSARI, JAWA TENGAH, ID, 53353'
+ '******inatan Blok u No 1 rt 87 rw 07 kelurahan Sukajaya, KOTA PALEMBANG, SUKARAMI, SUMATERA SELATAN, ID, 30151'
+ '******, Desa Adisana, KAB. BREBES, BUMIAYU, JAWA TENGAH, ID, 52273'
+ '******2/RW.3, Curug, Gunung Sindur, KAB. BOGOR, GUNUNG SINDUR, JAWA BARAT, ID, 16340']
+Kota/Kabupaten: 132 unique values
+Sample unique for Kota/Kabupaten: ['KAB. BOGOR' 'KAB. PURBALINGGA' 'KOTA PALEMBANG' 'KAB. BREBES'
+ 'KOTA TANGERANG SELATAN']
+Provinsi: 25 unique values
+Sample unique for Provinsi: ['JAWA BARAT' 'JAWA TENGAH' 'SUMATERA SELATAN' 'BANTEN' 'JAWA TIMUR']
+Waktu Pesanan Selesai: 307 unique values
+Sample unique for Waktu Pesanan Selesai: ['2024-02-05 19:46' '2024-02-08 09:36' '2024-02-09 14:38'
+ '2024-02-09 17:53' '2024-02-10 00:37']
