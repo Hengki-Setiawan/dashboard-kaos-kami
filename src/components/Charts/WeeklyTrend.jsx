@@ -76,7 +76,7 @@ export default function WeeklyTrend({ data }) {
           />
           <YAxis 
             stroke="hsl(var(--muted-foreground))" 
-            tick={{ fill: 'hsl(var(--muted-foreground))' }}
+            tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
             tickFormatter={(value) => formatCompact(value)}
             axisLine={false}
             tickLine={false}

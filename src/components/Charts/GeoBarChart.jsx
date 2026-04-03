@@ -66,7 +66,7 @@ export default function GeoBarChart({ data }) {
               layout="vertical"
               margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
             >
-              <XAxis type="number" hide />
+              <XAxis type="number" hide / minTickGap={15}>
               <YAxis 
                 dataKey="name" 
                 type="category" 

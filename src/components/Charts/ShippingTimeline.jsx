@@ -84,7 +84,7 @@ export default function ShippingTimeline({ data }) {
             barSize={30}
           >
             <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="hsl(var(--border))" />
-            <XAxis type="number" hide />
+            <XAxis type="number" hide / minTickGap={15}>
             <YAxis 
               dataKey="step" 
               type="category" 

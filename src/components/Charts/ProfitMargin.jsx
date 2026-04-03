@@ -81,15 +81,15 @@ export default function ProfitMargin({ data }) {
             <XAxis 
               dataKey="name" 
               stroke="hsl(var(--muted-foreground))" 
-              tick={{ fill: 'hsl(var(--muted-foreground))' }}
+              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
               axisLine={false}
               tickLine={false}
               dy={10}
-            />
+            / minTickGap={15}>
             <YAxis 
               yAxisId="left" 
               stroke="hsl(var(--muted-foreground))" 
-              tick={{ fill: 'hsl(var(--muted-foreground))' }}
+              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
               tickFormatter={(value) => formatCompact(value)}
               axisLine={false}
               tickLine={false}
@@ -99,7 +99,7 @@ export default function ProfitMargin({ data }) {
               yAxisId="right" 
               orientation="right" 
               stroke="hsl(var(--muted-foreground))" 
-              tick={{ fill: 'hsl(var(--muted-foreground))' }}
+              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
               tickFormatter={(val) => `${val.toFixed(0)}%`}
               axisLine={false}
               tickLine={false}

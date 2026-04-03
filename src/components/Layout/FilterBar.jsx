@@ -38,7 +38,7 @@ export default function FilterBar({ filters }) {
           else setSelectedProducts([val]);
         }}
       >
-        <SelectTrigger className="w-[180px]">
+        <SelectTrigger className="w-full sm:w-[180px]">
           <SelectValue placeholder="Semua Produk" />
         </SelectTrigger>
         <SelectContent>
@@ -56,7 +56,7 @@ export default function FilterBar({ filters }) {
           else setSelectedProvinces([val]);
         }}
       >
-        <SelectTrigger className="w-[180px]">
+        <SelectTrigger className="w-full sm:w-[180px]">
           <SelectValue placeholder="Semua Provinsi" />
         </SelectTrigger>
         <SelectContent>
@@ -74,7 +74,7 @@ export default function FilterBar({ filters }) {
           else setSelectedPayments([val]);
         }}
       >
-        <SelectTrigger className="w-[200px]">
+        <SelectTrigger className="w-full sm:w-[200px]">
           <SelectValue placeholder="Semua Pembayaran" />
         </SelectTrigger>
         <SelectContent>
@@ -92,7 +92,7 @@ export default function FilterBar({ filters }) {
           else setSelectedShippings([val]);
         }}
       >
-        <SelectTrigger className="w-[200px]">
+        <SelectTrigger className="w-full sm:w-[200px]">
           <SelectValue placeholder="Semua Pengiriman" />
         </SelectTrigger>
         <SelectContent>
@@ -103,25 +103,27 @@ export default function FilterBar({ filters }) {
         </SelectContent>
       </Select>
 
-      <div className="flex items-center gap-2">
+      <div className="flex flex-col w-full sm:w-auto sm:flex-row items-start sm:items-center gap-2">
         <label className="text-sm font-medium text-muted-foreground whitespace-nowrap hidden lg:block">Periode:</label>
-        <input 
-          type="date" 
-          className="text-sm px-3 py-2 h-10 border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-          value={dateRange[0] || ''}
-          min={filters.dateBounds?.[0]}
-          max={filters.dateBounds?.[1]}
-          onChange={(e) => setDateRange([e.target.value || null, dateRange[1]])}
-        />
-        <span className="text-muted-foreground">-</span>
-        <input 
-          type="date" 
-          className="text-sm px-3 py-2 h-10 border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-          value={dateRange[1] || ''}
-          min={filters.dateBounds?.[0]}
-          max={filters.dateBounds?.[1]}
-          onChange={(e) => setDateRange([dateRange[0], e.target.value || null])}
-        />
+        <div className="flex gap-2 w-full sm:w-auto">
+          <input 
+            type="date" 
+            className="text-sm px-3 py-2 flex-1 sm:flex-none border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+            value={dateRange[0] || ''}
+            min={filters.dateBounds?.[0]}
+            max={filters.dateBounds?.[1]}
+            onChange={(e) => setDateRange([e.target.value || null, dateRange[1]])}
+          />
+          <span className="text-muted-foreground flex items-center">-</span>
+          <input 
+            type="date" 
+            className="text-sm px-3 py-2 flex-1 sm:flex-none border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+            value={dateRange[1] || ''}
+            min={filters.dateBounds?.[0]}
+            max={filters.dateBounds?.[1]}
+            onChange={(e) => setDateRange([dateRange[0], e.target.value || null])}
+          />
+        </div>
       </div>
 
       {hasFilters && (

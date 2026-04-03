@@ -4,7 +4,7 @@ import {
   DollarSign, Package, Lightbulb, ChevronLeft, ChevronRight
 } from 'lucide-react';
 
-export default function Sidebar({ activeSection, collapsed, setCollapsed }) {
+export default function Sidebar({ activeSection, collapsed, setCollapsed, mobileMenuOpen, setMobileMenuOpen }) {
   const links = [
     { id: 'overview',   label: 'Overview',       icon: <LayoutDashboard size={20} />, color: '#6366f1' },
     { id: 'revenue',    label: 'Revenue Trends',  icon: <TrendingUp size={20} />,      color: '#0ea5e9' },
@@ -18,8 +18,7 @@ export default function Sidebar({ activeSection, collapsed, setCollapsed }) {
 
   return (
     <aside 
-      className="fixed top-0 left-0 bottom-0 z-50 flex flex-col bg-card border-r border-border overflow-y-auto overflow-x-hidden transition-all duration-300"
-      style={{ width: collapsed ? '72px' : '260px' }}
+      className={`fixed top-0 left-0 bottom-0 z-50 flex flex-col bg-card border-r border-border overflow-y-auto overflow-x-hidden transition-all duration-300 transform ${mobileMenuOpen ? 'translate-x-0 w-[260px]' : '-translate-x-full lg:translate-x-0'} ${collapsed ? 'lg:w-[72px]' : 'lg:w-[260px]'}`}
     >
       {/* Logo / Brand */}
       <div className="flex items-center gap-3 px-5 py-5 border-b border-border">
@@ -52,6 +51,7 @@ export default function Sidebar({ activeSection, collapsed, setCollapsed }) {
           <a
             key={link.id}
             href={`#${link.id}`}
+            onClick={() => setMobileMenuOpen && setMobileMenuOpen(false)}
             className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors no-underline ${
               activeSection === link.id 
                 ? 'bg-primary/10 text-primary font-semibold' 

@@ -67,11 +67,11 @@ export default function ParetoChart({ data }) {
               interval={0}
               angle={-45}
               textAnchor="end"
-            />
+            / minTickGap={15}>
             <YAxis 
               yAxisId="left" 
               stroke="hsl(var(--muted-foreground))" 
-              tick={{ fill: 'hsl(var(--muted-foreground))' }}
+              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
               tickFormatter={(value) => formatIDR(value).replace('Rp', '')}
               axisLine={false}
               tickLine={false}
@@ -80,7 +80,7 @@ export default function ParetoChart({ data }) {
               yAxisId="right" 
               orientation="right" 
               stroke="hsl(var(--muted-foreground))" 
-              tick={{ fill: 'hsl(var(--muted-foreground))' }}
+              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
               tickFormatter={(val) => `${val.toFixed(0)}%`}
               domain={[0, 100]}
               axisLine={false}

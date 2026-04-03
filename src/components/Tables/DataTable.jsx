@@ -95,8 +95,8 @@ export default function DataTable({ data }) {
           </tbody>
         </table>
       </div>
-      <div className="flex items-center justify-between px-5 py-3 border-t border-border bg-card shrink-0">
-        <span className="text-xs text-muted-foreground">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 px-5 py-3 border-t border-border bg-card shrink-0">
+        <span className="text-xs text-muted-foreground text-center sm:text-left">
           Menampilkan {filteredRows.length === 0 ? 0 : startIndex + 1} hingga {Math.min(startIndex + rowsPerPage, filteredRows.length)} dari {filteredRows.length} entri
         </span>
         <div className="flex items-center gap-2">

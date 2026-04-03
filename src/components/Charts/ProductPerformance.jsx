@@ -96,7 +96,7 @@ export default function ProductPerformance({ data }) {
                 margin={{ top: 5, right: 30, left: 10, bottom: 5 }}
               >
                 <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="hsl(var(--border))" />
-                <XAxis type="number" hide />
+                <XAxis type="number" hide / minTickGap={15}>
                 <YAxis 
                   dataKey="name" 
                   type="category" 

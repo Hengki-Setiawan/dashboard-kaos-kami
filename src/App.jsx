@@ -59,6 +59,7 @@ function App() {
   const { filteredData } = filters;
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('overview');
 
   useEffect(() => {
@@ -133,16 +134,25 @@ function App() {
         activeSection={activeSection} 
         collapsed={sidebarCollapsed} 
         setCollapsed={setSidebarCollapsed} 
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
       />
+
+      {/* Overlay for Mobile Sidebar */}
+      {mobileMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden backdrop-blur-sm transition-opacity"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
 
       {/* Main Content */}
       <div 
-        className="flex-1 flex flex-col relative z-10 transition-all duration-300 ease-out"
-        style={{ marginLeft: sidebarCollapsed ? '72px' : '260px' }}
+        className={`flex-1 flex flex-col relative z-10 transition-all duration-300 ease-out ml-0 ${sidebarCollapsed ? 'lg:ml-[72px]' : 'lg:ml-[260px]'}`}
       >
-        <Header />
+        <Header onMenuClick={() => setMobileMenuOpen(true)} />
 
-        <main className="flex-1 px-6 lg:px-8 py-6 overflow-x-hidden">
+        <main className="flex-1 px-4 sm:px-6 lg:px-8 py-6 overflow-x-hidden w-full max-w-[100vw]">
           <FilterBar filters={filters} />
 
           <div className="flex flex-col gap-10 max-w-[1500px] mx-auto pb-20">

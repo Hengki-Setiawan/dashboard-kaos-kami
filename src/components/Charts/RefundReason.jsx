@@ -46,7 +46,7 @@ export default function RefundReason({ data }) {
                 layout="vertical"
                 margin={{ top: 5, right: 30, left: 10, bottom: 5 }}
               >
-                <XAxis type="number" hide />
+                <XAxis type="number" hide / minTickGap={15}>
                 <YAxis 
                   dataKey="name" 
                   type="category" 

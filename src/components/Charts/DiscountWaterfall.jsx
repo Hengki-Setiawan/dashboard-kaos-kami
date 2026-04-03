@@ -91,7 +91,7 @@ export default function DiscountWaterfall({ data }) {
                 type="number"
                 stroke="hsl(var(--muted-foreground))" 
                 tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
-                tickFormatter={(value) => formatCompact(value)}
+                tickFormatter={(value) = minTickGap={15}> formatCompact(value)}
                 axisLine={false}
                 tickLine={false}
               />

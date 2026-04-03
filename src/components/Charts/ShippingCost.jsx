@@ -82,20 +82,20 @@ export default function ShippingCost({ data }) {
           <ResponsiveContainer width="100%" height="100%" minHeight={300}>
             <BarChart
               data={chartData}
-              margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
+              margin={{ top: 15, right: 10, bottom: 15, left: -15 }}
             >
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" vertical={false} />
               <XAxis 
                 dataKey="name" 
                 stroke="hsl(var(--muted-foreground))" 
-                tick={{ fill: 'hsl(var(--muted-foreground))' }}
+                tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
                 axisLine={false}
                 tickLine={false}
                 dy={10}
-              />
+              / minTickGap={15}>
               <YAxis 
                 stroke="hsl(var(--muted-foreground))" 
-                tick={{ fill: 'hsl(var(--muted-foreground))' }}
+                tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
                 tickFormatter={(value) => formatCompact(value)}
                 axisLine={false}
                 tickLine={false}

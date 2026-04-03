@@ -73,14 +73,14 @@ export default function WeightAnalysis({ data }) {
             <XAxis 
               dataKey="name" 
               stroke="hsl(var(--muted-foreground))" 
-              tick={{ fill: 'hsl(var(--muted-foreground))' }}
+              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
               axisLine={false}
               tickLine={false}
               dy={10}
-            />
+            / minTickGap={15}>
             <YAxis 
               stroke="hsl(var(--muted-foreground))" 
-              tick={{ fill: 'hsl(var(--muted-foreground))' }}
+              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
               axisLine={false}
               tickLine={false}
               dx={-10}
