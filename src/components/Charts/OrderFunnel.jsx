@@ -54,7 +54,7 @@ export default function OrderFunnel({ data }) {
             margin={{ top: 20, right: 40, left: 10, bottom: 20 }}
             barSize={30}
           >
-            <XAxis type="number" hide domain={[0, 'dataMax']} / minTickGap={15}>
+            <XAxis type="number" hide domain={[0, 'dataMax']} minTickGap={15} />
             <YAxis 
               dataKey="step" 
               type="category" 

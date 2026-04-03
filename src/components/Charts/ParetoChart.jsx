@@ -67,7 +67,7 @@ export default function ParetoChart({ data }) {
               interval={0}
               angle={-45}
               textAnchor="end"
-            / minTickGap={15}>
+            minTickGap={15} />
             <YAxis 
               yAxisId="left" 
               stroke="hsl(var(--muted-foreground))" 

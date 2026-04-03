@@ -77,7 +77,7 @@ export default function RevenueTrend({ data }) {
             axisLine={false}
             tickLine={false}
             dy={10}
-          / minTickGap={15}>
+          minTickGap={15} />
           <YAxis 
             yAxisId="left" 
             stroke="hsl(var(--muted-foreground))" 

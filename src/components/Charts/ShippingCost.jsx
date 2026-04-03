@@ -92,7 +92,7 @@ export default function ShippingCost({ data }) {
                 axisLine={false}
                 tickLine={false}
                 dy={10}
-              / minTickGap={15}>
+              minTickGap={15} />
               <YAxis 
                 stroke="hsl(var(--muted-foreground))" 
                 tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}

@@ -91,7 +91,7 @@ export default function SizeDistribution({ data }) {
             tick={{ fill: 'hsl(var(--muted-foreground))', fontWeight: 'bold' }}
             axisLine={false}
             tickLine={false}
-          / minTickGap={15}>
+          minTickGap={15} />
           <YAxis 
             stroke="hsl(var(--muted-foreground))" 
             tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
