@@ -91,8 +91,9 @@ export default function DiscountWaterfall({ data }) {
                 type="number"
                 stroke="hsl(var(--muted-foreground))" 
                 tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
-                tickFormatter={(value) = minTickGap={15}> formatCompact(value)}
-                axisLine={false}
+                tickFormatter={(value) => formatCompact(value)}
+                minTickGap={15}
+                  axisLine={false}
                 tickLine={false}
               />
               <YAxis 
