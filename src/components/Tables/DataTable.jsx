@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import { Table, Search, ChevronLeft, ChevronRight } from 'lucide-react';
-import { formatCurrency, formatNumber } from '../../utils/dataTransformers';
+
+const formatCurrency = (val) => {
+  return new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    maximumFractionDigits: 0
+  }).format(val);
+};
 
 export default function DataTable({ data }) {
   const [page, setPage] = useState(1);
