@@ -26,12 +26,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="flex items-center gap-3">
-        <div 
-          className="w-9 h-9 rounded-xl flex items-center justify-center text-white font-bold text-base shadow-inner"
-          style={{ background: 'linear-gradient(135deg, #6366f1, #0ea5e9)' }}
-        >
-          K
-        </div>
+        <img 
+          src="/logo.png" 
+          alt="Kaos Kami" 
+          className="w-9 h-9 object-contain rounded-lg"
+        />
         <div>
           <h1 className="text-base font-bold tracking-tight" style={{ fontFamily: 'var(--font-heading)' }}>
             Kaos Kami Analytics

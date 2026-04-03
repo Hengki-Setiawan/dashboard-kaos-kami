@@ -310,3 +310,14 @@
 .export-mode .chart-actions {
   opacity: 0 !important;
 }
+
+/* Force Framer Motion to paint early on the KPI cards during PDF capture */
+.export-mode div[style*="opacity: 0"],
+.export-mode div[style*="opacity:0"] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+.export-mode div {
+  animation: none !important;
+  transition: none !important;
+}

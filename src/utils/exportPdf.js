@@ -7,9 +7,9 @@ import jsPDF from 'jspdf';
 export async function generateDashboardPDF() {
   // Prevent UI scrolling issues during capture by adding specific styling
   const opt = {
-    quality: 0.95,
+    quality: 0.7,
     backgroundColor: '#ffffff',
-    pixelRatio: 2,
+    pixelRatio: 1, // Reduced to prevent 200MB massive sizes
     skipFonts: false,
     filter: (node) => {
       // Don't capture the header itself again
@@ -50,7 +50,10 @@ export async function generateDashboardPDF() {
 
     // Enable detailed text rendering for PDF mode
     document.body.classList.add('export-mode');
-    await new Promise(r => setTimeout(r, 500)); // allow DOM to paint the new nodes
+    
+    // Dispatch event to force charts to mount/load (bypassing scroll-intersection observer)
+    window.dispatchEvent(new Event('pdf-export-start'));
+    await new Promise(r => setTimeout(r, 1200)); // Wait deep enough for Framer Motion & IntersectionObserver to realize they need to paint
 
     for (const sec of sections) {
       const element = document.getElementById(sec.id);
@@ -60,23 +63,29 @@ export async function generateDashboardPDF() {
       const originalDisplay = element.style.display;
       element.style.display = 'block';
 
-      // Capture section
-      const canvas = await toCanvas(element, opt);
-      element.style.display = originalDisplay; // restore
-
-      const imgData = canvas.toDataURL('image/png');
+      // Capture section as JPEG for massive compression (drops 30MB+ to ~2MB)
+      const imgData = canvas.toDataURL('image/jpeg', 0.85);
       const imgProps = pdf.getImageProperties(imgData);
       
       // Calculate scaled dimensions fitting page width
       const drawWidth = pdfWidth - (margin * 2);
       const drawHeight = (imgProps.height * drawWidth) / imgProps.width;
 
-      // Check if it fits on current page
+      // Check if it fits on current page. If it doesn't fit on a NEW page either, scale it down.
+      const maxAvailableHeight = pdfHeight - margin * 2;
+      
       if (currY + drawHeight > pdfHeight - margin && !isFirstPage) {
         pdf.addPage();
-        currY = margin;
+        currY = margin + 10; // Extra padding for new page
       }
       if (isFirstPage) isFirstPage = false;
+      
+      // Auto-scale to fix "terpotong" (cutoff) sections like financials
+      if (drawHeight > maxAvailableHeight) {
+        const ratio = maxAvailableHeight / drawHeight;
+        drawHeight = maxAvailableHeight - 10;
+        drawWidth = drawWidth * ratio;
+      }
 
       // Add section title
       pdf.setTextColor(0, 0, 0);
@@ -87,15 +96,17 @@ export async function generateDashboardPDF() {
       const imgYOffset = currY > 50 ? currY + 5 : currY;
 
       // Add image
-      pdf.addImage(imgData, 'PNG', margin, imgYOffset, drawWidth, drawHeight);
+      pdf.addImage(imgData, 'JPEG', margin, imgYOffset, drawWidth, drawHeight);
       
       currY = imgYOffset + drawHeight + 15;
     }
 
-    // Revert export DOM state
+    // Revert export DOM state and components
     document.body.classList.remove('export-mode');
+    window.dispatchEvent(new Event('pdf-export-end'));
 
-    // Add general footer to all pages
+    // compress PDF directly to reduce output size
+    const pdfData = pdf.output('arraybuffer');
     const pageCount = pdf.internal.getNumberOfPages();
     for (let i = 1; i <= pageCount; i++) {
         pdf.setPage(i);

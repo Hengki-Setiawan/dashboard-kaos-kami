@@ -23,12 +23,11 @@ export default function Sidebar({ activeSection, collapsed, setCollapsed }) {
     >
       {/* Logo / Brand */}
       <div className="flex items-center gap-3 px-5 py-5 border-b border-border">
-        <div 
-          className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-lg"
-          style={{ background: 'linear-gradient(135deg, #6366f1, #0ea5e9)' }}
-        >
-          K
-        </div>
+        <img 
+          src="/logo.png" 
+          alt="Kaos Kami" 
+          className="flex-shrink-0 w-10 h-10 object-contain rounded-xl"
+        />
         {!collapsed && (
           <div className="overflow-hidden">
             <h1 className="text-sm font-bold tracking-tight whitespace-nowrap" style={{ fontFamily: 'var(--font-heading)' }}>

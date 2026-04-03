@@ -30,6 +30,7 @@ import ShippingPromo from './components/Charts/ShippingPromo';
 import RefundReason from './components/Charts/RefundReason';
 import BuyerNotes from './components/Charts/BuyerNotes';
 import InsightsPanel from './components/InsightsPanel';
+import DataTable from './components/Tables/DataTable';
 import { useMemo } from 'react';
 import { useFilteredData } from './hooks/useFilteredData';
 import { 
@@ -342,6 +343,9 @@ function App() {
               <InsightsPanel data={filteredData} />
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-5">
                 <OrderFunnel data={filteredData} />
+              </div>
+              <div className="mt-5">
+                <DataTable data={filteredData} />
               </div>
             </section>
 

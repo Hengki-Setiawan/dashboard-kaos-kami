@@ -18,9 +18,16 @@ export default function ChartCard({
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(!reanimate);
+  const [isExporting, setIsExporting] = useState(false);
   const cardRef = useRef(null);
 
   useEffect(() => {
+    const handleExportStart = () => setIsExporting(true);
+    const handleExportEnd = () => setIsExporting(false);
+
+    window.addEventListener('pdf-export-start', handleExportStart);
+    window.addEventListener('pdf-export-end', handleExportEnd);
+
     if (!reanimate) return;
 
     const observer = new IntersectionObserver(
@@ -41,7 +48,11 @@ export default function ChartCard({
       observer.observe(cardRef.current);
     }
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('pdf-export-start', handleExportStart);
+      window.removeEventListener('pdf-export-end', handleExportEnd);
+    };
   }, [reanimate]);
 
   return (
@@ -57,29 +68,11 @@ export default function ChartCard({
           </button>
         </CardHeader>
         <CardContent className="flex-1 p-4 md:p-6 pt-0 min-h-[350px]">
-          {isVisible ? children : (
+          {(isVisible || isExporting) ? children : (
             <div className="w-full h-full min-h-[300px] bg-muted/20 rounded-xl animate-pulse-glow flex items-center justify-center">
               <div className="w-10 h-10 border-4 border-primary/20 border-t-primary rounded-full animate-spin"></div>
             </div>
           )}
-          
-          {/* PDF EXPORT MODE ONLY: Detailed Descriptions mapped from Modal data */}
-          <div className="export-mode-data mt-6 pt-4 border-t border-[hsl(var(--border))] text-sm">
-            <div className="grid grid-cols-2 gap-4 text-left">
-               <div>
-                  <p className="font-bold mb-1 text-[hsl(var(--primary))] uppercase tracking-wider text-[10px]">🎯 Tujuan Diagram</p>
-                  <p className="text-[hsl(var(--muted-foreground))] mb-3 text-xs leading-relaxed">{purpose}</p>
-                  <p className="font-bold mb-1 text-[hsl(var(--primary))] uppercase tracking-wider text-[10px]">✨ Insight Utama</p>
-                  <p className="text-[hsl(var(--muted-foreground))] text-xs leading-relaxed">{insight}</p>
-               </div>
-               <div>
-                  <p className="font-bold mb-1 text-[hsl(var(--primary))] uppercase tracking-wider text-[10px]">📊 Definisi Data & Formula</p>
-                  <p className="text-[hsl(var(--muted-foreground))] mb-3 text-xs leading-relaxed">{dataDef} {formula}</p>
-                  <p className="font-bold mb-1 text-[hsl(var(--primary))] uppercase tracking-wider text-[10px]">💡 Saran Aksi</p>
-                  <p className="text-[hsl(var(--muted-foreground))] text-xs leading-relaxed">{tips}</p>
-               </div>
-            </div>
-          </div>
         </CardContent>
       </Card>
       
